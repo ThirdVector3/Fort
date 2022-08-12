@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class MenuPhotos : MonoBehaviour
 {
-    [SerializeField] private Image[] images;
+    [SerializeField] private RawImage[] images;
     [SerializeField] private float delay;
     [SerializeField] private float delayIterations;
     int nowImage = 0;
+    [SerializeField] Color color = Color.white;
     void Start()
     {
         if (images.Length > 1)
