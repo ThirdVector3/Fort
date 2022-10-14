@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/testScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/weapons/Assets/Scenes/MainMenu.unity
+    guid: 6f560fc0f406f314db7bd0e243611d6d
+  - enabled: 1
+    path: Assets/weapons/Assets/Scenes/ShooseCharacter.unity
+    guid: 233706b574736454c8185e19cb50134d
+  - enabled: 1
+    path: Assets/weapons/Assets/Scenes/Games/GenRusGame 1.unity
+    guid: a6a79a0dd50ff704b9a6bac65bad9d63
+  - enabled: 1
+    path: Assets/weapons/Assets/Scenes/Games/SolRusGame.unity
+    guid: 237f189ad3d367f48a188ec25ef423ee
+  - enabled: 1
+    path: Assets/weapons/Assets/Scenes/Games/GenGerGame 1.unity
+    guid: a072c7e77e400414e815873009a77329
+  - enabled: 1
+    path: Assets/weapons/Assets/Scenes/Games/SolGerGame.unity
+    guid: a1f294491f6f6e24186429edec58f23b
   m_configObjects: {}
