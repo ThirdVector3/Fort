@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public GameObject aimRifle;
     public GameObject aim;
     public GameObject weapon;
+    public GameObject hands;
 
     public float speed = 1;
     public float runSpeed = 1;
@@ -122,6 +123,13 @@ public class Player : MonoBehaviour
                 aimRifle.SetActive(false);
                 aim.SetActive(true);
                 speed = tmpSpeed;
+                hands.SetActive(false);
+                if (isAim)
+                {
+                    StartCoroutine(camSizeSwitch());
+                    isAim = false;
+                }
+
             }
 
         }
@@ -143,7 +151,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            if(isAim == false)
+            if(isAim == false && weaponInHands)
             {
                 StartCoroutine(camSizeReturn());
                 isAim = true;
@@ -151,7 +159,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(1))
         {
-            if (isAim == true)
+            if (isAim == true && weaponInHands)
             {
                 StartCoroutine(camSizeSwitch());
                 isAim = false;

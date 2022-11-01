@@ -65,6 +65,8 @@ public class Weapon : MonoBehaviour
         gameObject.transform.rotation = playerObject.transform.rotation;
         gameObject.transform.SetParent(playerObject.transform);
         player.TeleportWeapon();
+
+        player.hands.SetActive(true);
         
         
 
