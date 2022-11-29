@@ -12,14 +12,18 @@ public class MenuPhotos : MonoBehaviour
     [SerializeField] Color color = Color.white;
     void Start()
     {
-        if (images.Length > 1)
+        int rImage = Random.Range(0, images.Length);
+        for (int i = 0; i < images.Length; i++)
         {
-            StartCoroutine(Switch());
+            if (i == rImage)
+                images[i].gameObject.SetActive(true);
+            else
+                images[i].gameObject.SetActive(false);
         }
     }
     Color firstColor;
     Color secondColor;
-    IEnumerator Switch()
+    IEnumerator Switch() // не нужно
     {
         yield return new WaitForSeconds(delay);
         firstColor = images[nowImage].color;
